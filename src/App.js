@@ -6,21 +6,19 @@ import { MainContext } from './Context';
 import Header from './components/Header.js';
 import { handlePress } from './utils/HandlePress.js';
 import { handleDelete } from './utils/HandleDelete.js';
+import { turkishChars as initialTurkishChars } from './data/turkishChars.js';
+import { screenData } from './data/screenData.js';
 
 function App() {
 
-  const [data, setData] = useState([
-    [{ char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }],
-    [{ char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }],
-    [{ char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }],
-    [{ char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }],
-    [{ char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }, { char: "", color: "gray" }],
-  ]);
+  const [data, setData] = useState(screenData);
+
+  const [turkishChars, setTurkishChars] = useState(initialTurkishChars);
 
   const [rowData, setRowData] = useState(["", "", "", "", ""]);
 
   const onKeyPress = (ch) => {
-    handlePress(data, setData, rowData, setRowData, ch, "KALEM");
+    handlePress(data, setData, rowData, setRowData, ch, "KALEM", turkishChars, setTurkishChars);
   }
 
   const onDelete = () => {
@@ -33,8 +31,10 @@ function App() {
     onKeyPress,
     onDelete,
     rowData,
-    setRowData
-  }
+    setRowData,
+    turkishChars,
+    setTurkishChars
+  };
 
   return (
     <div className="">
