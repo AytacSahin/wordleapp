@@ -14,6 +14,7 @@ const handlePress = (data, setData, rowData, setRowData, ch, word, turkishChars,
                     // Reset rowData
                     newRowData = ["", "", "", "", ""];
                 }
+                console.log("newRowData", newRowData);
                 setData(newData);
                 setRowData(newRowData);
                 return;
@@ -23,13 +24,27 @@ const handlePress = (data, setData, rowData, setRowData, ch, word, turkishChars,
 };
 
 const controlRowData = (rowIndex, rowData, word, setData, turkishChars, setTurkishChars) => {
-    const result = rowData.map((char, index) => {
-        if (char === word[index]) {
-            return { char, color: 'green' }; // Doğru karakter ve pozisyon
-        } else if (word.includes(char)) {
-            return { char, color: 'yellow' }; // Doğru karakter ancak yanlış pozisyon
+    const foundedArr = ["", "", "", "", ""];
+    const unFoundedArr = [];
+
+    rowData.forEach((char, index) => {
+        if (word[index] === char) {
+            foundedArr[index] = char;
         } else {
-            return { char, color: 'red' }; // Yanlış karakter
+            unFoundedArr.push(word[index]);
+        }
+    });
+
+    const result = rowData.map((char, index) => {
+        if (foundedArr[index] === char) {
+            return { char, color: 'green' }
+        } else {
+            if (unFoundedArr.includes(char)) {
+                unFoundedArr.splice(unFoundedArr.indexOf(char), 1);
+                return { char, color: 'yellow' }
+            } else {
+                return { char, color: '' }
+            }
         }
     });
 
@@ -43,8 +58,7 @@ const controlRowData = (rowIndex, rowData, word, setData, turkishChars, setTurki
     });
 
     // set keyboard colors: //
-
-
 }
 
 export { handlePress };
+

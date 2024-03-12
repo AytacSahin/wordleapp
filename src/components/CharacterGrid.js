@@ -5,7 +5,7 @@ const CharacterGrid = () => {
     const { data, rowData } = useContext(MainContext);
 
     useEffect(() => {
-        console.log("Tüm data:", data);
+        // console.log("Tüm data:", data);
     }, [rowData])
 
     return (
