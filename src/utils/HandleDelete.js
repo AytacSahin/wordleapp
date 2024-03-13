@@ -1,17 +1,13 @@
-const handleDelete = (data, setData) => {
-
-    // TO DO: tüm üst satırların da silinmesini engelle. 
+const handleDelete = (data, setData, currRow) => {
 
     const newData = [...data];
+    const i = currRow;
 
-    for (let i = newData.length - 1; i >= 0; i--) {
-        for (let j = newData[i].length - 1; j >= 0; j--) {
-            if (newData[i][j].char !== "") {
-                newData[i][j].char = "";
-                newData[i][j].color = "";
-                setData(newData);
-                return;
-            }
+    for (let j = newData[i].length - 1; j >= 0; j--) {
+        if (newData[i][j].char !== "") {
+            newData[i][j].char = "";
+            setData(newData);
+            return;
         }
     }
 }
