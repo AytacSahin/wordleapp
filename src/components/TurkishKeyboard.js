@@ -6,13 +6,14 @@ const TurkishKeyboard = () => {
 
     useEffect(() => {
         const handleKeyDown = (event) => {
-            const pressedKey = event.key.toUpperCase();
-
-            if (/^[A-ZĞÜŞİÖÇ]$/.test(pressedKey)) {
-                onKeyPress(pressedKey);
-            } else if (pressedKey === "ENTER") {
+            const pressedKey = event.key;
+            if (pressedKey === "i" || pressedKey === "İ") {
+                onKeyPress("İ");
+            } else if (/^[A-ZĞÜŞÖÇ]$/.test(pressedKey.toUpperCase())) {
+                onKeyPress(pressedKey.toUpperCase());
+            } else if (pressedKey.toUpperCase() === "ENTER") {
                 onEnterPress();
-            } else if (pressedKey === "BACKSPACE") {
+            } else if (pressedKey.toUpperCase() === "BACKSPACE") {
                 onDelete();
             }
         };

@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { MainContext, useContext } from '../Context';
 
 const CharacterGrid = () => {
-    const { data, rowData } = useContext(MainContext);
+    const { data } = useContext(MainContext);
 
     return (
         <div className="w-[440px] mx-auto mt-[7px]">

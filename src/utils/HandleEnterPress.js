@@ -1,5 +1,7 @@
 const handleEnterPress = async (word, setData, rowData, setRowData, currRow, setCurrRow, turkishChars) => {
 
+    console.log(word);
+
     if (rowData[4] === "") {
         return;
     } else {
@@ -31,16 +33,16 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
         const turkishCharIndex = turkishChars.findIndex(tc => tc.char === char);
 
         if (foundedArr[index] === char) {
-            turkishChars[turkishCharIndex].color = 'green';
-            return { char, color: 'green' };
+            turkishChars[turkishCharIndex].color = '#6AAA64';
+            return { char, color: '#6AAA64' };
         } else {
             if (unFoundedArr.includes(char)) {
                 unFoundedArr.splice(unFoundedArr.indexOf(char), 1);
-                turkishChars[turkishCharIndex].color = 'yellow';
-                return { char, color: 'yellow' };
+                turkishChars[turkishCharIndex].color = '#C9B458';
+                return { char, color: '#C9B458' };
             } else {
-                turkishChars[turkishCharIndex].color = 'gray';
-                return { char, color: 'gray' };
+                turkishChars[turkishCharIndex].color = '#787C7E';
+                return { char, color: '#787C7E' };
             }
         }
     });

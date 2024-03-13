@@ -9,10 +9,13 @@ import { handleEnterPress } from './utils/HandleEnterPress.js';
 import { handleDelete } from './utils/HandleDelete.js';
 import { turkishChars as initialTurkishChars } from './data/turkishChars.js';
 import { screenData } from './data/screenData.js';
+import { words } from '../src/data/gameData.js';
 
 function App() {
 
   const [data, setData] = useState(screenData);
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const [turkishChars, setTurkishChars] = useState(initialTurkishChars);
 
@@ -20,9 +23,15 @@ function App() {
 
   const [currRow, setCurrRow] = useState(0);
 
+  const [currentWord, setCurrentWord] = useState(() => {
+    // Başlangıçta rastgele bir kelime seç
+    const randomWord = words[Math.floor(Math.random() * words.length)];
+    return randomWord;
+  });
+
   const onEnterPress = () => {
     handleEnterPress(
-      "TALİP",
+      currentWord,
       setData,
       rowData,
       setRowData,
@@ -47,6 +56,8 @@ function App() {
   }, [currRow, data]);
 
   const contextData = {
+    currentWord,
+    setCurrentWord,
     data,
     setData,
     onKeyPress,
@@ -57,7 +68,9 @@ function App() {
     turkishChars,
     setTurkishChars,
     currRow,
-    setCurrRow
+    setCurrRow,
+    isLoading,
+    setIsLoading
   };
 
   return (
