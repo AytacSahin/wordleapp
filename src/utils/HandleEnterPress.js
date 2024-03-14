@@ -1,4 +1,4 @@
-const handleEnterPress = async (word, setData, rowData, setRowData, currRow, setCurrRow, turkishChars) => {
+const handleEnterPress = async (word, setData, rowData, setRowData, currRow, setCurrRow, turkishChars, setNotificationMessage, setGameOver, setSuccess) => {
 
     console.log(word);
 
@@ -10,7 +10,7 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
 
             const result = await response.json();
             if (result.error) {
-                console.warn("Sonuç bulunamadı. Lütfen geçerli bir kelime giriniz.");
+                setNotificationMessage("GEÇERSİZ KELİME");
                 return;
             }
         } catch (error) {
@@ -61,8 +61,22 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
     setRowData(newRowData);
 
     // Alt satıra in: //
-    const newCurrRow = currRow < 4 ? currRow + 1 : 4;
+    const newCurrRow = currRow < 5 ? currRow + 1 : 5;
     setCurrRow(newCurrRow);
+
+    // Satırda herkes yeşil mi ?? O zaman bitirrr
+    const rowGreeen = result.every(char => char.color === '#6AAA64');
+    if (rowGreeen) {
+        console.log("yesss");
+        setSuccess(true);
+        return;
+    }
+
+    // Satır tamamlandığında oyunun durumunu kontrol et
+    const allGreen = turkishChars.every(tc => tc.color === '#6AAA64');
+    if (newCurrRow === 5 && !allGreen) {
+        setGameOver(true);
+    }
 };
 
 export { handleEnterPress };

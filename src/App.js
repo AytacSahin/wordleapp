@@ -1,32 +1,41 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+
 import CharacterGrid from './components/CharacterGrid.js';
 import TurkishKeyboard from './components/TurkishKeyboard.js';
-import { MainContext } from './Context';
 import Header from './components/Header.js';
+import Notification from './components/Notification.js';
+
+import { MainContext } from './Context';
 import { handlePress } from './utils/HandlePress.js';
 import { handleEnterPress } from './utils/HandleEnterPress.js';
 import { handleDelete } from './utils/HandleDelete.js';
 import { turkishKeyboardChars as initialTurkishChars } from './data/turkishKeyboardChars.js';
 import { screenData } from './data/screenData.js';
 import { words } from '../src/data/gameData.js';
+import GameOver from './components/GameOver.js';
+import Success from './components/Success.js';
 
 function App() {
 
-  const [data, setData] = useState(screenData);
-
-  const [isLoading, setIsLoading] = useState(false);
-
   const [turkishChars, setTurkishChars] = useState(initialTurkishChars);
-
+  const [data, setData] = useState(screenData);
   const [rowData, setRowData] = useState(["", "", "", "", ""]);
-
   const [currRow, setCurrRow] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [notificationMessage, setNotificationMessage] = useState("");
+  const [gameOver, setGameOver] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const [currentWord, setCurrentWord] = useState(() => {
     const randomWord = words[Math.floor(Math.random() * words.length)];
     return randomWord;
   });
+
+  useEffect(() => {
+    console.log(currRow)
+  }, [currRow])
+
 
   const onEnterPress = () => {
     handleEnterPress(
@@ -37,6 +46,9 @@ function App() {
       currRow,
       setCurrRow,
       turkishChars,
+      setNotificationMessage,
+      setGameOver,
+      setSuccess
     );
   }
 
@@ -69,7 +81,11 @@ function App() {
     currRow,
     setCurrRow,
     isLoading,
-    setIsLoading
+    setIsLoading,
+    notificationMessage,
+    setNotificationMessage,
+    gameOver,
+    setGameOver
   };
 
   return (
@@ -78,6 +94,9 @@ function App() {
         <Header />
         <CharacterGrid />
         <TurkishKeyboard />
+        {notificationMessage && <Notification />}
+        {gameOver && <GameOver />}
+        {success && <Success />}
       </MainContext.Provider >
     </div>
   );

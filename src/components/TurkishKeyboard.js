@@ -33,7 +33,7 @@ const TurkishKeyboard = () => {
                     {turkishChars.map((char, index) => (
                         <div
                             key={index}
-                            className="w-12 h-12 border border-gray-600 flex items-center justify-center m-1 cursor-pointer"
+                            className="w-12 h-12 border border-gray-600 rounded-xl flex items-center justify-center m-1 cursor-pointer"
                             onClick={() => onKeyPress(char.char)}
                             style={{ backgroundColor: char.color }}
                         >
@@ -45,7 +45,7 @@ const TurkishKeyboard = () => {
                     {turkishChars.map((char, index) => (
                         <div
                             key={index}
-                            className="w-12 h-12 border border-gray-600 flex items-center justify-center m-1 cursor-pointer"
+                            className="w-12 h-12 border border-gray-600 rounded-xl flex items-center justify-center m-1 cursor-pointer"
                             onClick={() => onKeyPress(char.char)}
                             style={{ backgroundColor: char.color }}
                         >
@@ -55,7 +55,7 @@ const TurkishKeyboard = () => {
                 </div>
                 <div className="flex justify-center">
                     <div
-                        className="w-20 h-12 border border-gray-600 flex items-center justify-center m-1 cursor-pointer"
+                        className="w-20 h-12 border border-gray-600 rounded-xl flex items-center justify-center m-1 cursor-pointer"
                         onClick={onEnterPress}
                     >
                         Enter
@@ -63,7 +63,7 @@ const TurkishKeyboard = () => {
                     {turkishChars.map((char, index) => (
                         <div
                             key={index}
-                            className="w-12 h-12 border border-gray-600 flex items-center justify-center m-1 cursor-pointer"
+                            className="w-12 h-12 border border-gray-600 rounded-xl flex items-center justify-center m-1 cursor-pointer"
                             onClick={() => onKeyPress(char.char)}
                             style={{ backgroundColor: char.color }}
                         >
@@ -71,7 +71,7 @@ const TurkishKeyboard = () => {
                         </div>
                     )).slice(21, 29)}
                     <div
-                        className="w-12 h-12 border border-gray-400 flex items-center justify-center m-1 cursor-pointer"
+                        className="w-12 h-12 border border-gray-600 rounded-xl flex items-center justify-center m-1 cursor-pointer"
                         onClick={onDelete}
                     >
                         Sil
