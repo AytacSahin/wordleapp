@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
+      animation: {
+        'bounce': 'bounce 0.5s infinite', // Yeni animasyon tanımı: bounce
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+      },
       transitionProperty: {
         'width': 'width',
         'transform': 'transform',

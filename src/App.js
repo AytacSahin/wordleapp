@@ -24,7 +24,6 @@ function App() {
   const [currRow, setCurrRow] = useState(0);
 
   const [currentWord, setCurrentWord] = useState(() => {
-    // Başlangıçta rastgele bir kelime seç
     const randomWord = words[Math.floor(Math.random() * words.length)];
     return randomWord;
   });
@@ -77,8 +76,8 @@ function App() {
     <div className="">
       <MainContext.Provider value={contextData}>
         <Header />
-        <CharacterGrid data={data} setData={setData} />
-        <TurkishKeyboard data={data} setData={setData} />
+        <CharacterGrid />
+        <TurkishKeyboard />
       </MainContext.Provider >
     </div>
   );
