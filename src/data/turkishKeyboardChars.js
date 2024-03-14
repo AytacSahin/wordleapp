@@ -1,4 +1,4 @@
-const turkishChars = [
+const turkishKeyboardChars = [
     { char: "E", color: "white" }, { char: "R", color: "white" }, { char: "T", color: "white" },
     { char: "Y", color: "white" }, { char: "U", color: "white" }, { char: "I", color: "white" },
     { char: "O", color: "white" }, { char: "P", color: "white" }, { char: "Ğ", color: "white" },
@@ -14,4 +14,4 @@ const turkishChars = [
     { char: "Ö", color: "white" }, { char: "Ç", color: "white" },
 ];
 
-export { turkishChars };
+export { turkishKeyboardChars };

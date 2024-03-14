@@ -7,7 +7,7 @@ import Header from './components/Header.js';
 import { handlePress } from './utils/HandlePress.js';
 import { handleEnterPress } from './utils/HandleEnterPress.js';
 import { handleDelete } from './utils/HandleDelete.js';
-import { turkishChars as initialTurkishChars } from './data/turkishChars.js';
+import { turkishKeyboardChars as initialTurkishChars } from './data/turkishKeyboardChars.js';
 import { screenData } from './data/screenData.js';
 import { words } from '../src/data/gameData.js';
 
