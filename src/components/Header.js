@@ -1,15 +1,20 @@
 import React from 'react';
 import gameicon from '../assets/svg/gamepad.svg';
+import icon from '../assets/images/icon.png';
 
 const Header = () => {
     return (
-        <div className='flex flex-col items-center w-full mt-2'>
-            <h1 className='text-[40px] tracking-widest'>WORDLE</h1>
-            <img
-                src={gameicon}
-                alt="gamepad"
-                className="w-[50px] h-[50px] scale-[2] hover:scale-[1.2] transition-transform duration-300 ease-in-out"
-            />
+        <div className='flex justify-center w-full mt-2'>
+            <div className='flex items-center justify-center'>
+                <img
+                    src={icon}
+                    alt="app icon"
+                    className="w-[40px] h-[40px]"
+                />
+            </div>
+            <div className='w-[220px] flex items-center justify-center'>
+                <h1 className='text-[40px] pt-2 tracking-widest'>WORDLE</h1>
+            </div>
         </div>
     )
 }
