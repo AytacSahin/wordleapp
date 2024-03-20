@@ -30,6 +30,7 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
         }
     });
 
+    // Keyboard ve Wordle Renkleri:
     const result = rowData.map((char, index) => {
         const turkishCharIndex = turkishChars.findIndex(tc => tc.char === char);
 
@@ -39,10 +40,21 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
         } else {
             if (unFoundedArr.includes(char)) {
                 unFoundedArr.splice(unFoundedArr.indexOf(char), 1);
-                turkishChars[turkishCharIndex].color = '#C9B458';
+                if (turkishChars[turkishCharIndex].color === '#6AAA64') {
+                    turkishChars[turkishCharIndex].color = '#6AAA64';
+                } else {
+                    turkishChars[turkishCharIndex].color = '#C9B458';
+                }
                 return { char, color: '#C9B458' };
             } else {
-                turkishChars[turkishCharIndex].color = '#787C7E';
+                if (turkishChars[turkishCharIndex].color === '#6AAA64') {
+                    turkishChars[turkishCharIndex].color = '#6AAA64';
+                }
+                else if (turkishChars[turkishCharIndex].color === '#C9B458') {
+                    turkishChars[turkishCharIndex].color = '#C9B458';
+                } else {
+                    turkishChars[turkishCharIndex].color = '#787C7E';
+                }
                 return { char, color: '#787C7E' };
             }
         }

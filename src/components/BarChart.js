@@ -26,7 +26,7 @@ const BarChart = ({ gamesWin }) => {
                         <div className="bar-label mr-2 w-2 text-sm">{parseInt(index) + 1}</div>
                         {/* Bar */}
                         <div
-                            className="bar h-8 flex items-center justify-end px-[6px] rounded-md"
+                            className="bar h-8 flex items-center justify-start px-[6px] rounded-md"
                             style={{ width: barWidth, backgroundColor: barColor, minWidth: '48px' }}
                         >
                             {/* Bar içindeki değer */}
