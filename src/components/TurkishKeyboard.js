@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { MainContext, useContext } from '../Context';
+import deleteIcon from '../assets/svg/backspace.svg';
 
 const TurkishKeyboard = () => {
     const { onKeyPress, onDelete, onEnterPress, turkishChars } = useContext(MainContext);
@@ -83,7 +84,7 @@ const TurkishKeyboard = () => {
                         className="w-20 h-14 bg-[#D3D6DA] rounded-md flex items-center justify-center m-1 cursor-pointer font-bold"
                         onClick={onDelete}
                     >
-                        SİL
+                        <img src={deleteIcon} className="w-6"></img>
                     </div>
                 </div>
             </div>

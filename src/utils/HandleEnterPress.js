@@ -1,6 +1,4 @@
-const handleEnterPress = async (word, setData, rowData, setRowData, currRow, setCurrRow, turkishChars, setNotificationMessage, setGameOver, setSuccess, isLoading, setIsLoading) => {
-
-    console.log(word);
+const handleEnterPress = async (word, setData, rowData, setRowData, currRow, setCurrRow, turkishChars, setNotificationMessage, setGameOver, setSuccess, isLoading, setIsLoading, userStats, setUserStats) => {
 
     if (rowData[4] === "") {
         return;
@@ -70,8 +68,20 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
     // Satırda herkes yeşil mi ?? O zaman bitirrr
     const rowGreeen = result.every(char => char.color === '#6AAA64');
     if (rowGreeen) {
-        console.log("yesss");
         setSuccess(true);
+
+        const updatedUserStats = {
+            gamesPlayed: userStats.gamesPlayed + 1,
+            gamesWin: [...userStats.gamesWin, currRow],
+            totalScore: userStats.totalScore + (5 - currRow) * 10,
+            series: userStats.series + 1,
+            bestSeries: Math.max(userStats.bestSeries || 0, userStats.series + 1)
+        };
+        if (updatedUserStats.series > userStats.bestSeries) {
+            updatedUserStats.bestSeries = updatedUserStats.series;
+        }
+        setUserStats(updatedUserStats);
+        localStorage.setItem('userStats', JSON.stringify(updatedUserStats));
         return;
     }
 
@@ -79,6 +89,16 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
     const allGreen = turkishChars.every(tc => tc.color === '#6AAA64');
     if (newCurrRow === 5 && !allGreen) {
         setGameOver(true);
+        const updatedUserStats = {
+            gamesPlayed: userStats.gamesPlayed + 1,
+            gamesWin: userStats.gamesWin,
+            totalScore: userStats.totalScore,
+            series: 0,
+            bestSeries: Math.max(userStats.bestSeries || 0, 0),
+        };
+        setUserStats(updatedUserStats);
+        localStorage.setItem('userStats', JSON.stringify(updatedUserStats));
+        return;
     }
 };
 

@@ -12,7 +12,7 @@ const words = [
     // F
     "FACİA", "FAHİŞ", "FAKİR", "FATİH", "FEDAİ", "FENNİ", "FERDİ", "FESİH", "FETİH", "FEVRİ", "FİDAN", "FİDYE", "FİGÜR", "FİKİR", "FİLİZ", "FİNAL", "FİRAR", "FİRMA", "FİŞEK", "FİTİL", "FİTNE", "FİYAT", "FİZİK", "FOSİL",
     // G
-    "GAFİL", "GALİP", "GARİP", "GEÇİM", "GEÇİŞ", "GEÇİT", "GELİN", "GELİR", "GENİŞ", "GENİZ", "GERGİ", "GEYİK", "GİDER", "GİDİŞ", "GİRİŞ", "GİTAR", "GİYİM", "GİYİŞ", "GİYİT", "GİYSİ", "GİZEM", "GİZLİ", "GORİL", "GOTİK",
+    "GAFİL", "GALİP", "GARİP", "GEÇİM", "GEÇİŞ", "GEÇİT", "GELİN", "GELİR", "GENİŞ", "GENİZ", "GERGİ", "GEYİK", "GİDER", "GİDİŞ", "GİRİŞ", "GİTAR", "GİYİM", "GİYİŞ", "GİYSİ", "GİZEM", "GİZLİ", "GORİL", "GOTİK",
     // H
     "HACİM", "HACİZ", "HADİS", "HAFİF", "HAKİM", "HAMSİ", "HANGİ", "HAPİS", "HARBİ", "HARİÇ", "HAŞİN", "HATİM", "HAVAİ", "HAYLİ", "HAZİN", "HEKİM", "HEPSİ", "HERİF", "HİCAP", "HİCAZ", "HİCİV", "HİCRİ", "HİLAL", "HİNDİ", "HİPPİ", "HİSAR", "HİSLİ", "HİSSE", "HİTAP", "HİTİT",
     // İ
@@ -34,7 +34,7 @@ const words = [
     // P
     "PANİK", "PARİS", "PARTİ", "PASİF", "PATİK", "PEŞİN", "PİKAP", "PİLAV", "PİLİÇ", "PİLOT", "PİNTİ", "PİPET", "PİŞİK", "PİŞTİ", "PİTON", "PİYAZ", "PİYES", "PİYON", "PİZZA", "POLİS",
     // R
-    "RAHİM", "RAHİP", "RAKİP", "RALLİ", "REHİN", "REJİM", "RESİM", "RESMİ", "REŞİT", "REVİR", "REZİL", "RİMEL", "RİNGA", "RİTİM", "RİYAD", "RİYAL", "RUBAİ", "RUTİN", "SABİT",
+    "RAHİM", "RAHİP", "RAKİP", "RALLİ", "REHİN", "REJİM", "RESİM", "RESMİ", "REŞİT", "REVİR", "REZİL", "RİMEL", "RİNGA", "RİTİM", "RİYAL", "RUBAİ", "RUTİN", "SABİT",
     // S
     "SAHİL", "SAHİP", "SAHNE", "SAKİN", "SALİM", "SAPIK", "SANKİ", "SEBİL", "SEÇİM", "SEDİR", "SEFİL", "SEKİZ", "SELİM", "SELVİ", "SEMAİ", "SEMİH", "SEMİZ", "SERGİ", "SERİN", "SESLİ", "SEVGİ", "SEYİR", "SEYİS", "SEZGİ", "SEZİŞ", "SIHHİ", "SİCİL", "SİCİM", "SİDİK", "SİFON", "SİĞİL", "SİHİR", "SİİRT", "SİKKE", "SİLAH", "SİLGİ", "SİLİK", "SİLME", "SİMGE", "SİMİT", "SİMYA", "SİNEK", "SİNİR", "SİNME", "SİNOP", "SİNSİ", "SİNÜS", "SİPER", "SİPSİ", "SİREN", "SİRKE", "SİROZ", "SİSLİ", "SİTEM", "SİVAS", "SİVİL", "SİVRİ", "SİYAH", "SOSİS", "SÜNNİ",
     // Ş

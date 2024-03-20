@@ -14,7 +14,7 @@ const CharacterBox = ({ char, color }) => {
 
     return (
         <div
-            className={`w-14 h-14 tablet:w-20 tablet:h-20 flex items-center justify-center pl-1 pt-2 tracking-widest phone:text-[40px] tablet:text-[50px] font-bold ${animationClass}`}
+            className={`w-14 h-14 tablet:w-16 tablet:h-16 flex items-center justify-center pl-1 pt-2 tracking-widest phone:text-[40px] tablet:text-[50px] font-bold ${animationClass}`}
             style={{
                 backgroundColor: color,
                 border: `3px solid ${color || "#D3D6DA"}`,
@@ -29,7 +29,7 @@ const CharacterBox = ({ char, color }) => {
 const CharacterGrid = () => {
     const { data } = useContext(MainContext);
     return (
-        <div className="tablet:w-[440px] phone:w-[320px] mx-auto mt-[10px]">
+        <div className="tablet:w-[370px] phone:w-[320px] mx-auto mt-[30px]">
             <div className="grid grid-cols-5 gap-2">
                 {data.map((row, rowIndex) => (
                     row.map((box, colIndex) => (

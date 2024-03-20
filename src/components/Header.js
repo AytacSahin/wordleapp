@@ -3,6 +3,7 @@ import icon from '../assets/images/icon.png';
 import statistics from '../assets/svg/statistics.svg';
 import information from '../assets/svg/information.svg';
 import InformationPopUp from './InformationPopUp';
+import StatisticsPopUp from './StatisticsPopUp';
 
 const Header = () => {
     const [showInformationPopup, setShowInformationPopup] = useState(false);
@@ -17,7 +18,7 @@ const Header = () => {
     };
 
     return (
-        <div className='flex items-center justify-between w-full mt-2 border-b-2'>
+        <div className='flex items-center justify-between w-full border-b-2'>
 
             <div>
                 <img
@@ -51,11 +52,7 @@ const Header = () => {
             )}
 
             {showStatisticsPopup && (
-                <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50">
-                    {/* Buraya istatistik içeriğini ekleyebilirsiniz */}
-                    <p className="text-white">Statistics Popup</p>
-                    <button className="text-white" onClick={() => setShowStatisticsPopup(false)}>Close</button>
-                </div>
+                <StatisticsPopUp setShowStatisticsPopup={setShowStatisticsPopup} />
             )}
 
         </div>

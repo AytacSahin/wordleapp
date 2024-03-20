@@ -13,6 +13,7 @@ import { handleDelete } from './utils/HandleDelete.js';
 import { turkishKeyboardChars as initialTurkishChars } from './data/turkishKeyboardChars.js';
 import { screenData } from './data/screenData.js';
 import { words } from '../src/data/gameData.js';
+
 import GameOver from './components/GameOver.js';
 import Success from './components/Success.js';
 import IsLoadingPage from './components/IsLoadingPage.js';
@@ -27,6 +28,7 @@ function App() {
   const [notificationMessage, setNotificationMessage] = useState("");
   const [gameOver, setGameOver] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [userStats, setUserStats] = useState(JSON.parse(localStorage.getItem('userStats')) || { gamesPlayed: 0, gamesWin: [], totalScore: 0, series: 0, bestSeries: 0 });
 
   const [currentWord, setCurrentWord] = useState(() => {
     const randomWord = words[Math.floor(Math.random() * words.length)];
@@ -34,9 +36,12 @@ function App() {
   });
 
   useEffect(() => {
-    console.log(currRow)
-  }, [currRow])
+    console.log(userStats)
+  }, [userStats])
 
+  useEffect(() => {
+    console.log(currentWord)
+  }, [currentWord])
 
   const onEnterPress = () => {
     handleEnterPress(
@@ -51,7 +56,9 @@ function App() {
       setGameOver,
       setSuccess,
       isLoading,
-      setIsLoading
+      setIsLoading,
+      userStats,
+      setUserStats
     );
   }
 
@@ -88,7 +95,9 @@ function App() {
     notificationMessage,
     setNotificationMessage,
     gameOver,
-    setGameOver
+    setGameOver,
+    userStats,
+    setUserStats
   };
 
   return (
