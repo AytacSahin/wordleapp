@@ -2,6 +2,7 @@ import React from 'react';
 import closeIcon from '../assets/svg/close.svg';
 import { MainContext, useContext } from '../Context';
 import BarChart from './BarChart';
+import coin from '../assets/svg/coin.svg'
 
 const StatisticsPopUp = ({ setShowStatisticsPopup }) => {
     const { userStats } = useContext(MainContext);
@@ -74,8 +75,13 @@ const StatisticsPopUp = ({ setShowStatisticsPopup }) => {
                         </p>
                     </div>
                     <div className='flex flex-col items-center justify-center'>
-                        <p className='text-2xl text-[#C9B458] font-extrabold'>
-                            {userStats.totalScore}🪙</p>
+                        <div className='flex items-center justify-center'>
+                            <p className='text-2xl text-[#C9B458] font-extrabold'>
+                                {userStats.totalScore}
+                            </p>
+                            <img role="coin" className='w-5 ml-1 pb-1' src={coin}>
+                            </img>
+                        </div>
                         <p className='text-[12px]'>
                             Toplam Puan
                         </p>
