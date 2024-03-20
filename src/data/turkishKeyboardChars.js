@@ -1,17 +1,17 @@
 const turkishKeyboardChars = [
-    { char: "E", color: "white" }, { char: "R", color: "white" }, { char: "T", color: "white" },
-    { char: "Y", color: "white" }, { char: "U", color: "white" }, { char: "I", color: "white" },
-    { char: "O", color: "white" }, { char: "P", color: "white" }, { char: "Ğ", color: "white" },
-    { char: "Ü", color: "white" },
+    { char: "E", color: "#D3D6DA" }, { char: "R", color: "#D3D6DA" }, { char: "T", color: "#D3D6DA" },
+    { char: "Y", color: "#D3D6DA" }, { char: "U", color: "#D3D6DA" }, { char: "I", color: "#D3D6DA" },
+    { char: "O", color: "#D3D6DA" }, { char: "P", color: "#D3D6DA" }, { char: "Ğ", color: "#D3D6DA" },
+    { char: "Ü", color: "#D3D6DA" },
 
-    { char: "A", color: "white" }, { char: "S", color: "white" }, { char: "D", color: "white" },
-    { char: "F", color: "white" }, { char: "G", color: "white" }, { char: "H", color: "white" },
-    { char: "J", color: "white" }, { char: "K", color: "white" }, { char: "L", color: "white" },
-    { char: "Ş", color: "white" }, { char: "İ", color: "white" },
+    { char: "A", color: "#D3D6DA" }, { char: "S", color: "#D3D6DA" }, { char: "D", color: "#D3D6DA" },
+    { char: "F", color: "#D3D6DA" }, { char: "G", color: "#D3D6DA" }, { char: "H", color: "#D3D6DA" },
+    { char: "J", color: "#D3D6DA" }, { char: "K", color: "#D3D6DA" }, { char: "L", color: "#D3D6DA" },
+    { char: "Ş", color: "#D3D6DA" }, { char: "İ", color: "#D3D6DA" },
 
-    { char: "Z", color: "white" }, { char: "C", color: "white" }, { char: "V", color: "white" },
-    { char: "B", color: "white" }, { char: "N", color: "white" }, { char: "M", color: "white" },
-    { char: "Ö", color: "white" }, { char: "Ç", color: "white" },
+    { char: "Z", color: "#D3D6DA" }, { char: "C", color: "#D3D6DA" }, { char: "V", color: "#D3D6DA" },
+    { char: "B", color: "#D3D6DA" }, { char: "N", color: "#D3D6DA" }, { char: "M", color: "#D3D6DA" },
+    { char: "Ö", color: "#D3D6DA" }, { char: "Ç", color: "#D3D6DA" },
 ];
 
 export { turkishKeyboardChars };

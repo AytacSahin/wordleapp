@@ -30,12 +30,16 @@ const TurkishKeyboard = () => {
         <div className="mx-auto">
             <div className="flex flex-col justify-center mt-8">
                 <div className="flex justify-center">
+
                     {turkishChars.map((char, index) => (
                         <div
                             key={index}
-                            className="w-12 h-12 border border-gray-600 rounded-lg flex items-center justify-center m-1 cursor-pointer"
+                            className="w-12 h-14 rounded-md flex items-center justify-center m-1 cursor-pointer font-bold"
                             onClick={() => onKeyPress(char.char)}
-                            style={{ backgroundColor: char.color }}
+                            style={{
+                                backgroundColor: char.color,
+                                color: `${char.color === "#D3D6DA" ? "black" : "white"}`
+                            }}
                         >
                             {char.char}
                         </div>
@@ -45,40 +49,45 @@ const TurkishKeyboard = () => {
                     {turkishChars.map((char, index) => (
                         <div
                             key={index}
-                            className="w-12 h-12 border border-gray-600 rounded-lg flex items-center justify-center m-1 cursor-pointer"
+                            className="w-12 h-14 rounded-md flex items-center justify-center m-1 cursor-pointer font-bold"
                             onClick={() => onKeyPress(char.char)}
-                            style={{ backgroundColor: char.color }}
-                        >
+                            style={{
+                                backgroundColor: char.color,
+                                color: `${char.color === "#D3D6DA" ? "black" : "white"}`
+                            }}                        >
                             {char.char}
                         </div>
                     )).slice(10, 21)}
                 </div>
                 <div className="flex justify-center">
                     <div
-                        className="w-20 h-12 border border-gray-600 bg-white rounded-lg flex items-center justify-center m-1 cursor-pointer"
+                        className="w-20 h-14 bg-[#D3D6DA] rounded-md flex items-center justify-center m-1 cursor-pointer font-semibold phone:text-[12px] tablet:text-[16px]"
                         onClick={onEnterPress}
                     >
-                        Enter
+                        ENTER
                     </div>
                     {turkishChars.map((char, index) => (
                         <div
                             key={index}
-                            className="w-12 h-12 border border-gray-600 rounded-lg flex items-center justify-center m-1 cursor-pointer"
+                            className="w-12 h-14 rounded-md flex items-center justify-center m-1 cursor-pointer font-bold"
                             onClick={() => onKeyPress(char.char)}
-                            style={{ backgroundColor: char.color }}
+                            style={{
+                                backgroundColor: char.color,
+                                color: `${char.color === "#D3D6DA" ? "black" : "white"}`
+                            }}
                         >
                             {char.char}
                         </div>
                     )).slice(21, 29)}
                     <div
-                        className="w-12 h-12 border border-gray-600 bg-white rounded-lg flex items-center justify-center m-1 cursor-pointer"
+                        className="w-20 h-14 bg-[#D3D6DA] rounded-md flex items-center justify-center m-1 cursor-pointer font-bold"
                         onClick={onDelete}
                     >
-                        Sil
+                        SİL
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

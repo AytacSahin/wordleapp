@@ -1,4 +1,4 @@
-const handleEnterPress = async (word, setData, rowData, setRowData, currRow, setCurrRow, turkishChars, setNotificationMessage, setGameOver, setSuccess) => {
+const handleEnterPress = async (word, setData, rowData, setRowData, currRow, setCurrRow, turkishChars, setNotificationMessage, setGameOver, setSuccess, isLoading, setIsLoading) => {
 
     console.log(word);
 
@@ -6,6 +6,7 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
         return;
     } else {
         try {
+            setIsLoading(true);
             const response = await fetch("https://sozluk.gov.tr/gts?ara=" + encodeURI(rowData.join('').toLocaleLowerCase("tr")));
 
             const result = await response.json();
@@ -14,7 +15,9 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
                 return;
             }
         } catch (error) {
-            console.error("API ile iletişim hatası:", error);
+            setNotificationMessage("Bağlantı Problemi. Tekrar Deneyiniz.");
+        } finally {
+            setIsLoading(false);
         }
     }
 

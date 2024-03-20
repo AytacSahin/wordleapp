@@ -15,6 +15,7 @@ import { screenData } from './data/screenData.js';
 import { words } from '../src/data/gameData.js';
 import GameOver from './components/GameOver.js';
 import Success from './components/Success.js';
+import IsLoadingPage from './components/IsLoadingPage.js';
 
 function App() {
 
@@ -48,7 +49,9 @@ function App() {
       turkishChars,
       setNotificationMessage,
       setGameOver,
-      setSuccess
+      setSuccess,
+      isLoading,
+      setIsLoading
     );
   }
 
@@ -95,6 +98,7 @@ function App() {
         <CharacterGrid />
         <TurkishKeyboard />
         {notificationMessage && <Notification />}
+        {isLoading && <IsLoadingPage />}
         {gameOver && <GameOver />}
         {success && <Success />}
       </MainContext.Provider >

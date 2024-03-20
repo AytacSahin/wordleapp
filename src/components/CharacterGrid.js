@@ -14,10 +14,11 @@ const CharacterBox = ({ char, color }) => {
 
     return (
         <div
-            className={`w-14 h-14 tablet:w-20 tablet:h-20 flex items-center justify-center text-[30px] tablet:text-[40px] ${animationClass}`}
+            className={`w-14 h-14 tablet:w-20 tablet:h-20 flex items-center justify-center pl-1 pt-2 tracking-widest phone:text-[40px] tablet:text-[50px] font-bold ${animationClass}`}
             style={{
                 backgroundColor: color,
-                border: `4px solid ${color || "#D3D6DA"}`,
+                border: `3px solid ${color || "#D3D6DA"}`,
+                color: `${color ? "white" : "black"}`,
             }}
         >
             {char}
