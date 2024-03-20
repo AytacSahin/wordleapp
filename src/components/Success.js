@@ -19,6 +19,7 @@ const Success = () => {
                 <div className='flex'>
                     <p className="text-xl">+{(6 - currRow) * 10}</p>
                     <img role="coin" className='w-5 ml-1 pb-1' src={coin} />
+                    
                 </div>
                 <button
                     className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 focus:outline-none"
