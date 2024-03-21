@@ -1,7 +1,7 @@
-<div style="display: flex; gap: 20px; overflow-x: auto;">
-    ![Ekran Görüntüsü 1](./src/assets/images/vision-1.png)
-    ![Ekran Görüntüsü 2](./src/assets/images/vision-2.png)
-    ![Ekran Görüntüsü 3](./src/assets/images/vision-3.png)
+<div style="display: flex; justify-content: center;">
+  <img src="./src/assets/images/vision-1.png" alt="Ekran Görüntüsü 1" style="width: 30%;">
+  <img src="./src/assets/images/vision-2.png" alt="Ekran Görüntüsü 2" style="width: 30%;">
+  <img src="./src/assets/images/vision-3.png" alt="Ekran Görüntüsü 3" style="width: 30%;">
 </div>
 
 # Wordle Oyunu Klonu - wordleapp
@@ -16,11 +16,11 @@ Oyunu [buradan](https://wordleapp-pi.vercel.app/) deneyebilirsiniz.
 
 Wordle klonu, aşağıdaki puanlama sistemine dayanmaktadır:
 
-- 1. satırda tahmin: 50 puan
-- 2. satırda tahmin: 40 puan
-- 3. satırda tahmin: 30 puan
-- 4. satırda tahmin: 20 puan
-- 5. satırda tahmin: 10 puan
+- "1." satırda tahmin: 50 puan
+- "2." satırda tahmin: 40 puan
+- "3." satırda tahmin: 30 puan
+- "4." satırda tahmin: 20 puan
+- "5." satırda tahmin: 10 puan
 
 ## İstatistikler
 
