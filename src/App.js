@@ -35,14 +35,6 @@ function App() {
     return randomWord;
   });
 
-  useEffect(() => {
-    console.log(userStats)
-  }, [userStats])
-
-  useEffect(() => {
-    console.log(currentWord)
-  }, [currentWord])
-
   const onEnterPress = () => {
     handleEnterPress(
       currentWord,

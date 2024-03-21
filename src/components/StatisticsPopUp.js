@@ -6,7 +6,6 @@ import coin from '../assets/svg/coin.svg'
 
 const StatisticsPopUp = ({ setShowStatisticsPopup }) => {
     const { userStats } = useContext(MainContext);
-    console.log("hellloooo", userStats);
     const handleCloseClick = () => {
         setShowStatisticsPopup(false);
     };

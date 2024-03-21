@@ -13,7 +13,8 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
                 return;
             }
         } catch (error) {
-            setNotificationMessage("Bağlantı Problemi. Tekrar Deneyiniz.");
+            setNotificationMessage("İnternet bağlantınızı kontrol ediniz.");
+            return;
         } finally {
             setIsLoading(false);
         }

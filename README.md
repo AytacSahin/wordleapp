@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+<div style="display: flex; gap: 20px; overflow-x: auto;">
+    ![Ekran Görüntüsü 1](./src/assets/images/vision-1.png)
+    ![Ekran Görüntüsü 2](./src/assets/images/vision-2.png)
+    ![Ekran Görüntüsü 3](./src/assets/images/vision-3.png)
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Wordle Oyunu Klonu - wordleapp
 
-## Available Scripts
+Bu proje, popüler Wordle oyununun klonunu içermektedir. Oyun, kullanıcının belirli bir kelimeyi tahmin etmeye çalıştığı basit ancak bağımlılık yapan bir kelime oyunudur.
 
-In the project directory, you can run:
+## Proje Linki
 
-### `npm start`
+Oyunu [buradan](https://wordleapp-pi.vercel.app/) deneyebilirsiniz.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Puanlama Sistemi
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Wordle klonu, aşağıdaki puanlama sistemine dayanmaktadır:
 
-### `npm test`
+- 1. satırda tahmin: 50 puan
+- 2. satırda tahmin: 40 puan
+- 3. satırda tahmin: 30 puan
+- 4. satırda tahmin: 20 puan
+- 5. satırda tahmin: 10 puan
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## İstatistikler
 
-### `npm run build`
+Oyun, kullanıcının performansını izlemek için kapsamlı bir istatistik bölümü içermektedir. İstatistikler arasında şunlar bulunmaktadır:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Toplam oyun sayısı
+- Kazanılan oyun sayısı
+- Kaybedilen oyun sayısı
+- Galibiyet oranı (%)
+- Mevcut kazanma serisi
+- En iyi kazanma serisi
+- Toplam kazanılan puanlar
+- Her satırdaki tahminlerin kazandırdığı puanlar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Renklerin Anlamları
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+README dosyasının "Information" bölümünde, oyundaki renklerin anlamlarını açıklayan bir bölüm bulunmaktadır. Kullanıcılar, bu bölümü okuyarak oyunun nasıl oynanacağına dair detaylı bilgi edinebilirler.
 
-### `npm run eject`
+## Kullanım
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Oyunu başlatmak için, projeyi yerel bir ortamda veya bir web sunucusunda çalıştırın ve tarayıcınızda görüntüleyin. Oyun, kelime tahminlerini yapmak için basit bir arayüz sunar ve istatistiklerinizi görüntülemek için ayrı bir bölüm sağlar.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Önemli Not: TDK API'si ile Anlamsız Kelime Kontrolü
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Projemde, kullanıcıların girdiği kelimelerin anlamlı olup olmadığını kontrol etmek için Türk Dil Kurumu (TDK) API'sini kullanıyorum. Kullanıcının girdiği kelime, TDK API'sine gönderilerek anlamı kontrol ediliyor. Eğer girilen kelime anlamsız ise, kullanıcıya "GEÇERSİZ KELİME" bildirimi gösteriliyor.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Bu işlem için internet bağlantısına ihtiyaç duyulmaktadır. Dolayısıyla, projeyi kullanırken internet bağlantısının aktif olması gerekmektedir. İnternet bağlantısı olmayan durumlarda, "İnternet bağlantınızı kontrol ediniz." uyarısı alabilirsiniz.
 
-## Learn More
+## Geliştirme
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Bu proje, React ve Tailwind CSS kullanılarak geliştirilmiştir. Geliştirme için aşağıdaki komutları kullanabilirsiniz:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# Bağımlılıkları yüklemek için
+npm install
 
-### Code Splitting
+# Geliştirme sunucusunu başlatmak için
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Üretim sürümünü oluşturmak için
+npm run build
+```
 
-### Analyzing the Bundle Size
+## Hata Bildirimleri ve İletişim
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Proje ile ilgili hatalar bildirmek veya diğer konularda iletişime geçmek için [GitHub Issues](https://github.com/AytacSahin/twitter-backend-project/issues) sayfasını kullanabilirsiniz.
 
-### Making a Progressive Web App
+## Proje Sahibi
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Aytac Sahin - [GitHub](https://github.com/AytacSahin)
+Oyunun keyfini çıkarın ve iyi oyunlar dilerim! 🎮🔤
