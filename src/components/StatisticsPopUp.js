@@ -22,7 +22,7 @@ const StatisticsPopUp = ({ setShowStatisticsPopup }) => {
             <div className="bg-white p-4 rounded-md shadow-lg">
                 <div className='flex justify-between items-center mb-4'>
                     <h2 className="text-2xl font-bold">İSTATİSTİK</h2>
-                    <img src={closeIcon} className='w-[26px] cursor-pointer' onClick={handleCloseClick}></img>
+                    <img src={closeIcon} alt='close' className='w-[26px] cursor-pointer' onClick={handleCloseClick}></img>
                 </div>
 
                 <div className='flex gap-6 text-center mt-2 justify-center'>
@@ -78,7 +78,7 @@ const StatisticsPopUp = ({ setShowStatisticsPopup }) => {
                             <p className='text-2xl text-[#C9B458] font-extrabold'>
                                 {userStats.totalScore}
                             </p>
-                            <img role="coin" className='w-5 ml-1 pb-1' src={coin}>
+                            <img alt='coin' className='w-5 ml-1 pb-1' src={coin}>
                             </img>
                         </div>
                         <p className='text-[12px]'>

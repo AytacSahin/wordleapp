@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 
 import CharacterGrid from './components/CharacterGrid.js';
 import TurkishKeyboard from './components/TurkishKeyboard.js';
@@ -34,10 +33,6 @@ function App() {
     const randomWord = words[Math.floor(Math.random() * words.length)];
     return randomWord;
   });
-
-  useEffect(() => {
-    console.log(currentWord);
-  }, [])
 
   const onEnterPress = () => {
     handleEnterPress(

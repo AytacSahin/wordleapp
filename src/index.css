@@ -10,4 +10,18 @@ body {
   background-color: #F7F7F7;
 }
 
+.coin-effect {
+  animation: shine 1s infinite alternate;
+}
+
+@keyframes shine {
+  from {
+    filter: brightness(1);
+  }
+
+  to {
+    filter: brightness(1.1);
+  }
+}
+
 code {}

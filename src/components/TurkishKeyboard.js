@@ -84,7 +84,7 @@ const TurkishKeyboard = () => {
                         className="w-20 h-14 bg-[#D3D6DA] rounded-md flex items-center justify-center m-1 cursor-pointer font-bold"
                         onClick={onDelete}
                     >
-                        <img src={deleteIcon} className="w-6"></img>
+                        <img src={deleteIcon} alt='delete button' className="w-6"></img>
                     </div>
                 </div>
             </div>

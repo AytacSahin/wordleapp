@@ -18,7 +18,7 @@ const InformationPopUp = ({ setShowInformationPopup }) => {
             <div className="bg-white p-8 rounded-md shadow-lg">
                 <div className='flex justify-between items-center mb-4'>
                     <h2 className="text-2xl font-bold">NASIL OYNANIR?</h2>
-                    <img src={closeIcon} className='w-[26px] cursor-pointer' onClick={handleCloseClick}></img>
+                    <img src={closeIcon} className='w-[26px] cursor-pointer' alt='close' onClick={handleCloseClick}></img>
                 </div>
                 <p><span className='font-bold'>WORDLE</span>'ı 6 denemede bulun.</p>
                 <p>Her tahmin 5 harfli doğru bir kelime olmalıdır. Göndermek için ENTER'a basın.</p>

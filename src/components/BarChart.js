@@ -14,8 +14,6 @@ const BarChart = ({ gamesWin }) => {
     // Toplam oyun sayısı
     const totalScore = Object.values(winBar).reduce((total, value) => total + value, 0);
 
-    console.log(totalScore);
-
     return (
         <div className="p-4 bg-gray-100 rounded-md">
             {Object.keys(winBar).map((index, i) => {
@@ -40,7 +38,7 @@ const BarChart = ({ gamesWin }) => {
                         {winBar[index] !== 0 && (
                             <div className='flex'>
                                 <span className="text-black text-xs ml-2 ">{winBar[index] * 10 * (6 - parseInt(index))}</span>
-                                <img role="coin" className='w-2 ml-1 pb-1' src={coin}></img>
+                                <img className='w-2 ml-1 pb-1' src={coin} alt='coin'></img>
                             </div>
                         )}
                     </div>
