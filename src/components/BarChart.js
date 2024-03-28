@@ -14,6 +14,8 @@ const BarChart = ({ gamesWin }) => {
     // Toplam oyun sayısı
     const totalScore = Object.values(winBar).reduce((total, value) => total + value, 0);
 
+    console.log(totalScore);
+
     return (
         <div className="p-4 bg-gray-100 rounded-md">
             {Object.keys(winBar).map((index, i) => {
@@ -24,19 +26,22 @@ const BarChart = ({ gamesWin }) => {
 
                 return (
                     <div key={index} className="flex items-center mb-2">
-                        <div className="bar-label mr-2 w-2 text-sm">{parseInt(index) + 1}</div>
+                        <div className="bar-label mr-2 w-2 text-sm">
+                            {parseInt(index) + 1}
+                        </div>
                         {/* Bar */}
                         <div
-                            className="bar h-8 flex items-center justify-start px-[6px] rounded-md"
-                            style={{ width: barWidth, backgroundColor: barColor, minWidth: '48px' }}
+                            className="bar h-6 flex items-center justify-start rounded-md"
+                            style={{ width: barWidth, backgroundColor: barColor, minWidth: '18px' }}
                         >
-                            {/* Bar içindeki değer */}
-                            <span className="text-white text-xs">{winBar[index] * 10 * (6 - parseInt(index))}</span>
-                            <img role="coin" className='w-2 ml-1 pb-1' src={coin}></img>
+                            {/* Bar İçerisi */}
+                            <span className="text-white italic mx-auto text-xs">{winBar[index]}</span>
                         </div>
-                        {/* Bar sayısı */}
                         {winBar[index] !== 0 && (
-                            <span className="text-black italic ml-2 text-xs">{winBar[index]} Wordle</span>
+                            <div className='flex'>
+                                <span className="text-black text-xs ml-2 ">{winBar[index] * 10 * (6 - parseInt(index))}</span>
+                                <img role="coin" className='w-2 ml-1 pb-1' src={coin}></img>
+                            </div>
                         )}
                     </div>
                 );
