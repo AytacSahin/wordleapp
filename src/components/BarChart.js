@@ -2,8 +2,9 @@ import React from 'react';
 import coin from '../assets/svg/coin.svg'
 
 const BarChart = ({ gamesWin }) => {
-    const winBar = { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0 };
-    const colorPalette = ['#1E4620', '#336633', '#4D8C4F', '#66B966', '#80D280'];
+
+    const winBar = { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 };
+    const colorPalette = ['#1E4620', '#336633', '#4D804D', '#66B966', '#80D280', '#99FF99'];
 
     // Oyun kazanma verileri
     gamesWin.forEach((winCount) => {
@@ -30,7 +31,7 @@ const BarChart = ({ gamesWin }) => {
                             style={{ width: barWidth, backgroundColor: barColor, minWidth: '48px' }}
                         >
                             {/* Bar içindeki değer */}
-                            <span className="text-white text-xs">{winBar[index] * 10 * (5 - parseInt(index))}</span>
+                            <span className="text-white text-xs">{winBar[index] * 10 * (6 - parseInt(index))}</span>
                             <img role="coin" className='w-2 ml-1 pb-1' src={coin}></img>
                         </div>
                         {/* Bar sayısı */}

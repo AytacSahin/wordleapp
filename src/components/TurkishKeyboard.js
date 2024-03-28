@@ -29,7 +29,7 @@ const TurkishKeyboard = () => {
 
     return (
         <div className="mx-auto">
-            <div className="flex flex-col justify-center mt-8">
+            <div className="flex flex-col justify-center phone:mt-4 tablet:mt-8 mb-8">
                 <div className="flex justify-center">
 
                     {turkishChars.map((char, index) => (

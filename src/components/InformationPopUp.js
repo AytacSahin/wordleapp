@@ -20,7 +20,7 @@ const InformationPopUp = ({ setShowInformationPopup }) => {
                     <h2 className="text-2xl font-bold">NASIL OYNANIR?</h2>
                     <img src={closeIcon} className='w-[26px] cursor-pointer' onClick={handleCloseClick}></img>
                 </div>
-                <p><span className='font-bold'>WORDLE</span>'ı 5 denemede bulun.</p>
+                <p><span className='font-bold'>WORDLE</span>'ı 6 denemede bulun.</p>
                 <p>Her tahmin 5 harfli doğru bir kelime olmalıdır. Göndermek için ENTER'a basın.</p>
                 <p className='border-b-2 pb-2'>Her tahminden sonra kutucukların renkleri tahmininizin yakınlığına göre değişecektir.</p>
                 <p className='pt-2 '>Örnekler:</p>

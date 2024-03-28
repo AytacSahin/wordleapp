@@ -35,6 +35,10 @@ function App() {
     return randomWord;
   });
 
+  useEffect(() => {
+    console.log(currentWord);
+  }, [])
+
   const onEnterPress = () => {
     handleEnterPress(
       currentWord,
@@ -93,7 +97,7 @@ function App() {
   };
 
   return (
-    <div className="">
+    <div >
       <MainContext.Provider value={contextData}>
         <Header />
         <CharacterGrid />
@@ -103,7 +107,7 @@ function App() {
         {gameOver && <GameOver />}
         {success && <Success />}
       </MainContext.Provider >
-    </div>
+    </div >
   );
 }
 

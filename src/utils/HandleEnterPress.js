@@ -75,18 +75,23 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
     setRowData(newRowData);
 
     // Alt satıra in: //
-    const newCurrRow = currRow < 5 ? currRow + 1 : 5;
+    const newCurrRow = currRow < 6 ? currRow + 1 : 6;
     setCurrRow(newCurrRow);
 
     // Satırda herkes yeşil mi ?? O zaman bitirrr
     const rowGreeen = result.every(char => char.color === '#6AAA64');
+
+    const newScore = userStats.gamesWin.reduce((totalScore, winCount) => {
+        return totalScore + (6 - winCount) * 10;
+    }, 0);
+
     if (rowGreeen) {
         setSuccess(true);
 
         const updatedUserStats = {
             gamesPlayed: userStats.gamesPlayed + 1,
             gamesWin: [...userStats.gamesWin, currRow],
-            totalScore: userStats.totalScore + (5 - currRow) * 10,
+            totalScore: newScore + (6 - currRow) * 10,
             series: userStats.series + 1,
             bestSeries: Math.max(userStats.bestSeries || 0, userStats.series + 1)
         };
@@ -100,12 +105,12 @@ const handleEnterPress = async (word, setData, rowData, setRowData, currRow, set
 
     // Satır tamamlandığında oyunun durumunu kontrol et
     const allGreen = turkishChars.every(tc => tc.color === '#6AAA64');
-    if (newCurrRow === 5 && !allGreen) {
+    if (newCurrRow === 6 && !allGreen) {
         setGameOver(true);
         const updatedUserStats = {
             gamesPlayed: userStats.gamesPlayed + 1,
             gamesWin: userStats.gamesWin,
-            totalScore: userStats.totalScore,
+            totalScore: newScore,
             series: 0,
             bestSeries: Math.max(userStats.bestSeries || 0, 0),
         };

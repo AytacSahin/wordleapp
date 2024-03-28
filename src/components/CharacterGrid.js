@@ -29,7 +29,7 @@ const CharacterBox = ({ char, color }) => {
 const CharacterGrid = () => {
     const { data } = useContext(MainContext);
     return (
-        <div className="tablet:w-[370px] phone:w-[320px] mx-auto mt-[30px]">
+        <div className="tablet:w-[370px] phone:w-[320px] mx-auto phone:mt-6">
             <div className="grid grid-cols-5 gap-2">
                 {data.map((row, rowIndex) => (
                     row.map((box, colIndex) => (
